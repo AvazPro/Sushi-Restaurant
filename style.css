@@ -1,0 +1,250 @@
+* {
+    box-sizing: border-box;
+}
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+body {
+    margin: 0;
+}
+a, span, label {
+    display: inline-block;
+}
+a {
+    text-decoration: none;
+}
+img {
+    width: 100%;
+    height: auto;
+}
+p {
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.container {
+    padding: 0 70px;
+}
+/* navbar */
+.main {
+    background-color: #1E1E1E;
+    padding-bottom: 50px;
+}
+.nav {
+    background-image: radial-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)), url("images/luxurybg4\ 1.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 10px 70px;
+    padding-bottom: 50px;  
+    /* border-radius: 0 0 45px 200px; */
+    /* border: 2px solid red; */
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav-list {
+    display: flex;
+    align-items: center;
+    width: 66%;
+}
+.nav-item {
+    margin-right: 45px;
+}
+.nav-item:last-child {
+    margin-right: 0;
+}
+.nav-item:last-child {
+    margin-left: auto;
+}
+.nav-link {
+    font-size: 17px;
+    text-transform: uppercase;
+    color: white;
+}
+.reservation-link {
+    font-size: 17px;
+    text-transform: uppercase;
+    color: #F5B532;
+    border: 2px solid #F5B532;
+    box-shadow: 0 0 5px 2px #F5B532;
+    width: 222px;
+    height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+}
+.reser-stick {
+    width: 50px;
+    height: 2px;
+    margin-left: 5px;
+    background-color: #F5B532;
+}
+/* Title */
+.title-top-text {
+    margin-top: 70px;
+    color: white;
+    text-align: center;
+}
+.title {
+    text-align: center;
+    color: #F5B532;
+    font-size: 60px;
+    margin: 0;
+}
+.title-bottom-text {
+    text-align: center;
+    color: white;
+    margin-top: 15px;
+}
+.gotomenu-link {
+    width: 222px;
+    height: 48px;
+    background-color: #F5B532;
+    color: black;
+    font-size: 17px;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.goto-link {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+.menulink-stick {
+    width: 50px;
+    height: 1.8px;
+    margin-left: 5px;
+    background-color: black;
+}
+
+/* Section */
+.section {
+    padding-top: 40px;
+}
+ .section-title-top {
+    color: white;
+    text-align: center;
+    padding-top: 0;
+    margin-top: 25px;
+}
+.section-title {
+    text-align: center;
+    color: #F5B532;
+    font-size: 40px;
+    margin: 0;
+    margin-bottom: 15px;
+}
+.section-text {
+    text-align: center;
+    color: white;
+    margin-bottom: 45px;
+}
+.section-sushi-name {
+    color: #F5B532;
+    text-transform: uppercase;
+    font-size: 25px;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 15px;
+}
+.section-sushi-text {
+    color: white;
+    margin-bottom: 15px;
+}
+.section-star {
+    color: #F5B532;
+    margin-right: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+.section-star:last-child {
+    margin-right: 0;
+}
+.section-order-link {
+    width: 190px;
+    height: 48px;
+    border: 2px solid #F5B532;
+    box-shadow: 0 0 15px 1px #F5B532;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #F5B532;
+    text-transform: uppercase;
+}
+.section-order-link-stick {
+    background-color: #F5B532;
+    margin-left: 5px;
+    width: 42px;
+    height: 1.8px;
+}
+.section-sushi-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 0 0 8px 1px #2A261F;
+}
+.section-sushi1,
+.section-sushi3 {
+    width: 32%;
+    /* border: 2px solid red; */
+}
+.section-sushi-text {
+    width: 250px;
+}
+.section-sushi-info {
+    padding: 40px 20px 20px 20px;
+}
+.section-sushi-info-bcg {
+    background-color: #2E2E2E;
+}
+.section-sushi-middle {
+    width: 36%;
+}
+.section-sushi-img1 {
+    height: 300px;
+}
+.section-img {
+    margin-top: 60px;
+}
+
+/* SECTION 2 */
+.section2-title-top-text {
+    text-align: center;
+    margin-top: 60px;
+}
+.section2-title-bottom-text {
+    text-align: center;
+}
+.section2-list {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+    margin-top: 25px;
+}
+.section2-link {
+    border: 2px solid white;
+    padding: 6px 25px;
+    font-size: 20px;
+    color: white;
+}
+.first-section2-link {
+    background-color: #F5B532;
+    color: black;
+    border: 2px solid #F5B532;
+
+}
