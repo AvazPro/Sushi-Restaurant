@@ -5,6 +5,9 @@
 *::after {
     box-sizing: inherit;
 }
+html {
+    scroll-behavior: smooth;
+}
 body {
     margin: 0;
 }
@@ -15,8 +18,9 @@ a {
     text-decoration: none;
 }
 img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
+    vertical-align: bottom;
 }
 p {
     margin: 0;
@@ -35,7 +39,6 @@ ul {
 /* navbar */
 .main {
     background-color: #1E1E1E;
-    padding-bottom: 50px;
 }
 .nav {
     background-image: radial-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)), url("images/luxurybg4\ 1.png");
@@ -43,15 +46,20 @@ ul {
     background-size: cover;
     background-repeat: no-repeat;
     padding: 10px 70px;
-    padding-bottom: 50px;  
-    /* border-radius: 0 0 45px 200px; */
-    /* border: 2px solid red; */
+    padding-bottom: 50px; 
+    padding-top: 80px; 
 }
 
 .navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 15px 100px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color: #1e1e1e6e;
 }
 .nav-list {
     display: flex;
@@ -176,6 +184,10 @@ ul {
 .section-star:last-child {
     margin-right: 0;
 }
+.section-sushi-img1 {
+    width: 100%;
+    margin-bottom: 0;
+}
 .section-order-link {
     width: 190px;
     height: 48px;
@@ -201,7 +213,6 @@ ul {
 .section-sushi1,
 .section-sushi3 {
     width: 32%;
-    /* border: 2px solid red; */
 }
 .section-sushi-text {
     width: 250px;
@@ -243,11 +254,11 @@ ul {
     font-size: 20px;
     color: white;
 }
-.first-section2-link {
+.section2-btn {
     background-color: #F5B532;
     color: black;
     border: 2px solid #F5B532;
-
+    cursor: pointer;
 }
 .section2-content-boxes {
     margin-top: 40px;
@@ -321,7 +332,7 @@ ul {
     background-image: linear-gradient(90deg, #1E1E1E 0 25%, rgba(0, 0, 0, 0.142)), url("images/finedining2.png");
     background-position: right;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     padding: 160px 0;
 }
 .section3-meal-price {
@@ -371,4 +382,494 @@ ul {
 }
 .section3-img-box {
     margin-top: 80px;
+}
+.section4-content-boxes {
+    margin-top: 70px;
+    height: 605px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.section4-content-left-box {
+    display: flex;
+    width: 55%;
+}
+.section4-img-box2 {
+    display: flex;
+    flex-direction: column;
+}
+.section4-content-right-box {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 50px;
+}
+.section4-content-text {
+    margin-bottom: 25px;
+}
+.section4-stick-of-link {
+    background-color: #F5B532;
+    margin-left: 5px;
+    width: 42px;
+    height: 1.8px;
+}
+.section4-link {
+    color: #F5B532;
+    text-transform: uppercase;
+    border: 2px solid #F5B532;
+    padding: 8px 15px;
+    display: inline-flex;
+    align-items: center;
+    align-self: flex-start;
+}
+
+/* FOOTER */
+.footer {
+    margin-top: 70px;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)), url("images/finedining-footer-bg.png");
+    background-position: cover;
+    background-repeat: none;
+    background-size: cover;
+    height: 700px;
+    box-shadow: inset 0 -25px 30px 15px #1E1E1E;
+}
+.footer-content {
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.footer-title {
+    font-size: 55px;
+    color: #F5D382;
+    text-transform: uppercase;
+    text-align: center;
+}
+.address-link,
+.address-tel-number {
+    color: white;
+}
+.address-and-tel-number {
+    width: 450px;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-reserve-link {
+    width: 180px;
+    height: 50px;
+    background-color: #F5B532;
+    color: #1E1E1E;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    margin: 55px 0;
+}
+.footer-social-networks-links {
+    margin-top: 50px;
+}
+.social-network {
+    color: white;
+    text-transform: uppercase;
+    margin-right: 30px;
+    position: relative;
+    padding: 4px 8px;
+    transition: 0.2s all linear;
+}
+.social-network:last-child {
+    margin-right: 0;
+}
+.social-network::after {
+    content: "";
+    position: absolute;
+    left: 10%;
+    bottom: 0;
+    width: 80%;
+    height: 0;
+    border: 2px solid #F5B532;
+    transition: 0.2s all linear;
+}
+.social-network:hover::after {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 26px;
+    border: 2px solid #F5B532;
+}
+.btn {
+    display: none;
+}
+/* MEDIA */
+@media(max-width:1450px){
+    .section2-list {
+        width: 90%;
+    }
+    .section4-content-boxes {
+        align-items: center;
+        height: auto;
+    }
+    .section4-content-left-box {
+        display: flex;
+        align-items: center;
+        width: 50%;
+    }
+    .section4-content-right-box {
+
+    }
+    .chef1 {
+        height: auto;
+        vertical-align: bottom;
+        width: 100%;
+    }
+}
+@media(max-width:1330px){
+    .section2-list {
+        width: 100%;
+    }
+}
+@media(max-width:1255px){
+    .nav-list {
+        width: 70%;
+    }
+    .section-sushi-img1 {
+        height: 210px;
+    }
+}
+@media(max-width:1200px){
+    .nav-list {
+        width: 75%;
+    }
+    .container {
+        padding: 0 100px;
+    }
+    .section2-list {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+    .section2-position {
+        position: relative;
+    }
+    .section2-link {
+        width: 80%;
+    }
+    .section2-item {
+        left: 40%;
+        margin-bottom: 10px;
+    }
+    .section3-content-box,
+    .section3-content-box-left,
+    .section3-content-box3 {
+        height: 400px;
+    }
+}
+@media(max-width:1130px){
+    .nav-list {
+        width: 80%;
+    }
+}
+@media(max-width:1070px){
+    .nav-list {
+        width: 82%;
+    }
+    .container {
+        padding: 50px;
+    }
+    .navbar {
+        padding: 10px 60px;
+    }
+}
+@media(max-width:1020px){
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 10px 50px;
+        margin-bottom: 50px;
+        background-color: #1e1e1e6e;
+    }
+    .brand-logo {
+        width: 70px;
+        height: 70px;
+    }
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 40%;
+        height: 100%;
+        padding: 30px;
+        background-color: #1E1E1E;
+    }
+    .navlist-show {
+        display: flex;
+        animation: show 0.2s linear;
+    }
+    @keyframes show {
+        0%{
+            transform: translateX(-100%);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+    .navlist-hide {
+        animation: hide 0.3s linear;
+    }
+    @keyframes hide {
+        0%{
+            transform: translateX(0);
+        }
+        100%{
+            transform: translateX(-100%);
+        }   
+    }
+    
+    .reservation-link {
+        display: flex;
+        padding: 0;
+        width: 100%;
+        height: auto;
+        box-shadow: none;
+        border: none;
+        color: white;
+    }
+    .reservation-link .reser-stick {
+        display: none;
+    }
+    .nav-item {
+        margin-right: 0;
+        margin-left: 0 !important;
+        margin-bottom: 15px;
+    }
+    .nav-item:last-child {
+        margin-bottom: 0;
+        margin-right: 0;
+    }
+    .btn {
+        display: block;
+        background-color: #1E1E1E;
+        border: 2px solid #F5B532;
+        border-radius: 5px;
+        width: 50px;
+        height: 35px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 6px 0;
+        transition: 0.2s all linear;
+    }
+    .stick {
+        width: 30px;
+        height: 2.5px;
+        background-color: #F5D382;
+        border-radius: 8px;
+    }
+    .btn-close .stick-top {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    .btn-close .stick-bottom {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+    .btn-close .stick-middle {
+        transform: scale(0.2);
+        opacity: 0;
+    }
+    .nav {
+        padding-top: 50px;
+    }
+    .section-sushi-boxes {
+        border: none;
+    }
+    .section-sushi1,
+    .section-sushi,
+    .section-sushi3 {
+        width: 50%;
+        margin-bottom: 20px;
+        border: none;
+    }
+    .section-sushi {
+        border: 1px solid #22201E;
+    }
+    .section-sushi3 {
+        margin-bottom: 0;
+    }
+    .section-sushi-img1 {
+        height: 270px;
+        width: 100%;
+    }
+    .section2-content-box-img {
+        height: 320px;
+        width: 80%;
+    }
+    .section2-content-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .section2-img {
+        order: -1;
+    }
+    .section2-content-box-img {
+        width: 100%;
+    }
+    .section2-content-box-info {
+        width: 100%;
+        background-color: #2E2E2E;
+        margin-bottom: 25px;
+    }
+    .section-img {
+        height: 300px;
+    }
+    .footer-title {
+        font-size: 40px;
+    }
+    .section4-content-boxes {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 0;
+    }
+    .section4-content-left-box {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    .section4-content-right-box {
+        width: 100%;
+        display: flex;
+    }
+    .section4-link {
+        margin: auto;
+    }
+    .footer {
+        margin-top: 25px;
+        height: auto;
+        padding-bottom: 25px;
+    }
+}
+@media(max-width:820px){
+    .section3-content-box {
+        background-position: center;
+        background-size: cover;
+        padding: 0;
+        height: 250px;
+    }
+    .section3-content-box-left {
+        height: 200px;
+    }
+    .section3-content-box3 {
+        height: 250px;
+    }
+    .section3-meal-price {
+        font-size: 30px;
+    }
+    .section3-img {
+        margin: 0;
+    }
+    .section-title {
+        font-size: 30px;
+    }
+    .status-of-dining-name {
+        font-size: 18px;
+    }
+    .status-of-dining-info {
+        font-size: 14px;
+    }
+    .navbar {
+        padding: 15px;
+    }
+}
+@media(max-width:768px){
+    .section-sushi1,
+    .section-sushi,
+    .section-sushi3 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .section-sushi-info {
+        text-align: center;
+        background-color: #2E2E2E;
+    }
+    .section-sushi-text {
+        margin: auto;
+    }
+    .section-sushi-boxes {
+        border: none;
+        justify-content: center;
+        background-color: #1E1E1E;
+    }
+    .section-img {
+        height: 210px;
+    }
+    .footer-title {
+        font-size: 30px;
+    }
+    .address-and-tel-number {
+        flex-direction: column;
+        align-items: center;
+        width: 290px;
+    }
+    .address-link {
+        margin-bottom: 15px;
+    }
+    .title {
+        font-size: 40px;
+    }
+
+}
+@media(max-width:530px){
+    .title {
+        font-size: 35px;
+    }
+    .footer-title {
+        font-size: 35px;
+    }
+    .section4-content-right-box {
+        width: 100%;
+        padding: 0;
+    }
+}
+@media(max-width:450px){
+    .section3-content-links {
+        flex-direction: column;
+        width: 190px;
+    }
+    .section3-content-link {
+        margin-bottom: 10px;
+    } 
+    .footer-title br {
+        display: none;
+    }
+    .footer-title {
+        font-size: 30px;
+        padding: 0;
+    }
+    .footer-content {
+        padding: 0 20px;
+    }
+    .section4-link span {
+        display: none;
+    }
+    .social-network {
+        margin-right: 10px;
+    }
+}
+@media(max-width:400px){
+    .footer-social-networks-links {
+        display: flex;
+        flex-direction: column;
+    }
+    .social-network {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
 }
